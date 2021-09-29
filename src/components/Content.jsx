@@ -4,13 +4,13 @@ import styled from "styled-components";
 
 const ICON_CIRCLES = [
   {
-    icon: "/src/assets/dollar-icon.svg",
+    icon: "../assets/dollar-icon.svg",
     text: "no boleto",
     bold: "até 60 dias",
     link: true,
   },
   {
-    icon: "/src/assets/truck-icon.svg",
+    icon: "../assets/truck-icon.svg",
     text: "acima de R$200",
     bold: "Frete grátis",
     link: false,
