@@ -2,22 +2,31 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+const Item = ({ data }) => {
+  return (
+    <>
+      <Circle>
+        <img src={data.icon} alt={data.text} />
+      </Circle>
+      <Text>
+        <strong>{data.bold}</strong>
+        <br />
+        {data.text}
+      </Text>
+    </>
+  );
+};
+
 const Circles = ({ item }) => {
   return (
     <Container>
       {item.link ? (
         <Link to="/boleto">
-          <Circle>
-            <img src={item.icon} alt={item.text} />
-          </Circle>
-          <strong>{item.text}</strong>
+          <Item data={item} />
         </Link>
       ) : (
         <>
-          <Circle>
-            <img src={item.icon} alt={item.text} />
-          </Circle>
-          <strong>{item.text}</strong>
+          <Item data={item} />
         </>
       )}
     </Container>
@@ -47,5 +56,16 @@ const Circle = styled.div`
   border-radius: 50%;
   img {
     width: 50%;
+  }
+  @media only screen and (max-width: 768px) {
+    height: 60px;
+    width: 60px;
+  }
+`;
+const Text = styled.p`
+  font-size: 15px;
+  text-align: center;
+  @media only screen and (max-width: 768px) {
+    font-size: 12px;
   }
 `;
