@@ -17,8 +17,8 @@ React exercise for the Frontend Developer job position at Inventa
 - Inside the components folder there are four components that make up the popup:
     - **PopUp.jsx**: render the popup content and create the portal
     - **Header.jsx**: popup header with the corresponding information
-    - **Content.jsx**: content of the popup, contains an array with the information of the items, performs the reverse function that changes the position of the items through an onClick event on the "Buy now" button and renders the Circles.jsx component that shows the items.
-    - **Circles.jsx**: receives the information of each item and renders the component, it also checks if the item will have a link to Ticket or not. 
+    - **Content.jsx**: content of the popup, contains an array with the information of the items, performs the reverse function that changes the position of the items through an onClick event on the "Compre agora" button and renders the Circles.jsx component that shows the items.
+    - **Circles.jsx**: receives the information of each item and renders the component, it also checks if the item will have a link to Boleto or not. 
 
   
 ## Features
@@ -36,7 +36,7 @@ const handleReverse = () => {
 The handleReverse function performs a toggle of the state.
 
 ### Navigate to /boleto
-The item with the "$" icon is a link to the route /boleto that renders a simple component that contains an h1 element and the title "Buy na Inventa".
+The item with the "$" icon is a link to the route /boleto that renders a simple component that contains an h1 element and the title "Compre na Inventa".
 
 I also thought it was a good idea to add a button that allows you to go back to home. 
 ## Demo
